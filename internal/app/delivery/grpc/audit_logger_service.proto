@@ -1,0 +1,20 @@
+syntax = "proto3";
+package grpc.audit_logger;
+
+option go_package = "/internal/app/delivery/grpc/generated";
+option objc_class_prefix = "audit_logger";
+
+message Info {
+  string objectCode = 1;
+  string actionCode = 2;
+  map<string, string> data = 3;
+  int64 createdAt = 4;
+}
+
+message Empty {}
+
+service AuditLogger {
+  rpc Log (Info) returns (Empty) {}
+}
+
+

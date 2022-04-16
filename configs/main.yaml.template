@@ -1,0 +1,13 @@
+grpc:
+  server:
+    port: GRPC_PORT
+clickhouse:
+  addr: [ADDRESSES]
+  auth:
+    db: DATA_BASE
+    user: USER_NAME
+    password: USER_PASSWORD
+  settings:
+    maxExecutionTime: 60
+  dialSecondsTimeout: 5
+  debug: false
